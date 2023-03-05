@@ -100,18 +100,23 @@
     // console.log('\n')
 }
 
-//task9
+//task9 
 {
     let str = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57';
-    let a='';
-    let min;
-    let max;
-    for (let i = 0; i < str.length; i++) {
-      a += str[i]
-      if(+str[i] && !+str[i+1]){
-        if(typeof min !== 'number' || a < +min) min = +a;
-        if(typeof max !== 'number' || a > +max) max = +a;
-      }
+    let a = 0;
+    let min = 50;
+    let max = 50;
+    console.log(str)
+    for (let i = 0; i < str.length; i++){
+        if(str[i+1] !== ' '){
+            a = Number(str[i] + str[i+1]);
+            if(a > max){
+                max = a;
+            }
+            if(a < min){
+                min = a;
+            }
+        }
     }
     console.log('Min:', min, 'Max:', max)
     console.log('\n')
@@ -132,5 +137,5 @@
     }
     console.log(`В ${n} ${count} числа`);
     console.log(`Сумма цифр числа ${n} = ${sum}`);
-    console.log(`${n} в обратном порядке: ${n.split('').reverse().join('')}`);
+    console.log(`${n} в обратном порядке: ${n.split('').reverse().join('')}`); 
 }
