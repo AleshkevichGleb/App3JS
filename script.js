@@ -76,28 +76,32 @@
         num++;
     }
     console.log(`Количество итераций: ${num}`)
+    console.log('\n')
 }
 
 
 //task8
 {
-    // let count = 0;
-    // let sum = 0;
-    // let message;
-    // do{
-    //     message = prompt('Введите число ')
-    //     if(message === '0') break;
-    //     if(isNaN(+message)){
-    //         alert('Введите число!');
-    //         continue;
-    //     }
-    //     sum += +message;
-    //     count++;
-    // }while(message)
-    // console.log(`Сумма ${sum}`);
-    // sum /= count;
-    // console.log(`Среднее арифметическое ${sum}`)
-    // console.log('\n')
+    let count = 0;
+    let sum = 0;
+    let message;
+    do{
+        message = prompt('Введите число ')
+        if(isNaN(+message)){
+            alert('Введите число!');
+            continue;
+        }
+        if(message === '0'){
+            break;
+        }else{
+            sum += +message;
+            count++;
+        }
+    }while(message)
+    console.log(`Сумма ${sum}`);
+    sum /= count;
+    console.log(`Среднее арифметическое ${sum}`)
+    console.log('\n')
 }
 
 //task9 
