@@ -91,7 +91,7 @@
             alert('Введите число!');
             continue;
         }
-        if(message === '0'){
+        if(message === '0' || message === ''){
             break;
         }else{
             sum += +message;
